@@ -14,6 +14,18 @@ $ erun foo.exs
 ```
 anywhere you want.
 
+For example, if you install `erun` with [Jason](https://github.com/michalmuskala/jason),
+```sh
+%{foo: "bar"}
+|> Jason.encode!
+|> IO.puts
+```
+the code above (`foo.exs`) can be executed as
+```sh
+$ erun foo.exs
+{"foo":"bar"}
+```
+
 ## Usage
 
 1. clone
