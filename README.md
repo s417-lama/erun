@@ -8,11 +8,7 @@ You cannot even install Mix projects globally in your system.
 
 By using `erun`, new Mix projects are not necessary for disposable scripts.
 `erun` resolves the problem simply by wrapping Mix projects in escript.
-If `erun` is installed with Mix dependencies you specified, you can run Elixir scripts by 
-```
-$ erun foo.exs
-```
-anywhere you want.
+If `erun` is installed with Mix dependencies you specified, you can run Elixir scripts anywhere you want.
 
 For example, if you install `erun` with [Jason](https://github.com/michalmuskala/jason),
 ```sh
