@@ -11,7 +11,7 @@ By using `erun`, new Mix projects become unnecessary for disposable scripts.
 If `erun` is installed with Mix dependencies you specified, you can run Elixir scripts anywhere you want.
 
 For example, if you install `erun` with [Jason](https://github.com/michalmuskala/jason),
-```sh
+```elixir
 %{foo: "bar"}
 |> Jason.encode!
 |> IO.puts
