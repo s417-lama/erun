@@ -4,8 +4,13 @@ defmodule Erun do
     Code.eval_string(string)
   end
   def main([filename | args]) do
-    Agent.start_link(fn -> args end, name: __MODULE__)
-    Code.eval_file(filename)
+    if File.exists?(filename) do
+      Agent.start_link(fn -> args end, name: __MODULE__)
+      Code.eval_file(filename)
+    else
+      IO.puts(:stderr, "File '#{filename}' is not found.")
+      exit({:shutdown, 1})
+    end
   end
   def main(_) do
     IO.puts(:stderr, """
