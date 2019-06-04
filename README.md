@@ -6,7 +6,7 @@ In Elixir scripts, you cannot use external libraries, such as [Jason](https://gi
 If you want to use functionalities of external Mix projects, you are forced to create new Mix projects to download dependencies.
 You cannot even install Mix projects globally in your system.
 
-By using `erun`, new Mix projects are not necessary for disposable scripts.
+By using `erun`, new Mix projects become unnecessary for disposable scripts.
 `erun` resolves the problem simply by wrapping Mix projects in escript.
 If `erun` is installed with Mix dependencies you specified, you can run Elixir scripts anywhere you want.
 
