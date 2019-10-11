@@ -24,12 +24,12 @@ $ erun foo.exs
 
 ## Usage
 
-1. clone
+#### 1. clone
 ```sh
 git clone git@github.com:s417-lama/erun.git
 ```
 
-2. modify `mix.exs` to include dependencies you want
+#### 2. modify `mix.exs` to include dependencies you want
 ```elixir
   defp deps do
     [
@@ -39,17 +39,28 @@ git clone git@github.com:s417-lama/erun.git
   end
 ```
 
-3. get deps
+#### 3. get deps
 ```sh
 mix deps.get
 ```
 
-4. compile and install
+#### 4. compile and install
 ```sh
 mix escript.install
 ```
 
-5. try to run
+#### 5. add escript dir to `PATH`
+(If needed) add escript path in `.bashrc`.
+```sh
+echo 'export PATH=${HOME}/.mix/escripts:$PATH' >> ~/.bashrc
+```
+or if you are using [asdf](https://github.com/asdf-vm/asdf),
+```sh
+echo 'export PATH=$(asdf where elixir)/.mix/escripts:$PATH' >> ~/.bashrc
+```
+After that, restart a shell or run `. ~/.bashrc`.
+
+#### 6. try to run
 ```sh
 $ erun -e "IO.puts :hello"
 hello
